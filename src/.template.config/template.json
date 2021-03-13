@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Gab Soulavy",
+    "classifications": [
+        "Console",
+        "Windows Service"
+    ],
+    "identity": "Gab.Windows.Service.cSharp",
+    "name": "Windows Service Template",
+    "shortName": "g-windows-service",
+    "tags": {
+        "language": "c#",
+        "type": "project"
+    },
+    "sourceName": "ServiceTemplate"
+}
