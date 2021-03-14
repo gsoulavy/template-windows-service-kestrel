@@ -1,0 +1,27 @@
+name: Release to Nuget
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Create Nuget Package
+      run: dotnet pack -configuration Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/service-template/releases/tag/$${{ github.event.release.tag_name }}"
+      working-directory: ./src
+    - name: Archive Nuget Package
+      uses: actions/upload-artifact@v1
+      with:
+        name: ServiceTemplate
+        path: ./src/ServiceTemplate/bin/Release/ServiceTemplate.${{ github.event.release.tag_name }}.nupkg
