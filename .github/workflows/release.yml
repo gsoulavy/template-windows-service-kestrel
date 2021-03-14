@@ -28,4 +28,4 @@ jobs:
         path: ./src/ServiceTemplate/bin/Release/ServiceTemplate.${{ github.event.release.tag_name }}.nupkg
         
     - name: Publish NuGet Package
-      run: dotnet nuget push **/*.nupkg --api-key $${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
