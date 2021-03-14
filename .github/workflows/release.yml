@@ -19,7 +19,7 @@ jobs:
       run: dotnet restore
       working-directory: ./src
     - name: Create Nuget Package
-      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/service-template/releases/tag/$${{ github.event.release.tag_name }}"
+      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/service-template/releases/tag/${{ github.event.release.tag_name }}"
       working-directory: ./src
     - name: Archive Nuget Package
       uses: actions/upload-artifact@v1
