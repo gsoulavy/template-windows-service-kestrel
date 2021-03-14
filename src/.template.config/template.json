@@ -7,7 +7,7 @@
     ],
     "identity": "Gab.Windows.Service.cSharp",
     "name": "Windows Service Template",
-    "shortName": "g-windows-service",
+    "shortName": "g-ws",
     "tags": {
         "language": "c#",
         "type": "project"
