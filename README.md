@@ -1,2 +1,2 @@
 # Windows Service Template
-[![Continuous Ingegration](https://github.com/gsoulavy/service-template/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/service-template/actions/workflows/ci.yml)
+[![Continuous Ingegration](https://github.com/gsoulavy/service-template/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/service-template/actions/workflows/ci.yml) [![Release to Nuget](https://github.com/gsoulavy/template-windows-service/actions/workflows/release.yml/badge.svg)](https://github.com/gsoulavy/template-windows-service/actions/workflows/release.yml)
