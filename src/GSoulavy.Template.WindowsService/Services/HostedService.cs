@@ -27,7 +27,7 @@
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Timed {Name} Service running.", _optionsMonitor.CurrentValue.Name);
+            _logger.LogInformation("Timed {Name} Service running", _optionsMonitor.CurrentValue.Name);
             _timer = new Timer(
                 DoWork,
                 null,
@@ -40,10 +40,8 @@
 
         public Task StopAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Timed {Name} Service is stopping.", _optionsMonitor.CurrentValue.Name);
-
+            _logger.LogInformation("Timed {Name} Service is stopping", _optionsMonitor.CurrentValue.Name);
             _timer?.Change(Timeout.Infinite, 0);
-
             return Task.CompletedTask;
         }
 

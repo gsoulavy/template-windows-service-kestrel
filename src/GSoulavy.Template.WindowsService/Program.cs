@@ -1,7 +1,6 @@
 ﻿namespace GSoulavy.Template.WindowsService
 {
     using System;
-    using System.Diagnostics;
 
     using Configurations;
 
@@ -9,6 +8,8 @@
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+
+    using Serilog;
 
     using Services;
 
@@ -27,6 +28,7 @@
 
                         builder
                             .AddJsonFile("appsettings.json", false, true)
+                            .AddJsonFile("appsettings.log.json", false, true)
                             .AddJsonFile(
                                 $"appsettings.{ctx.HostingEnvironment.EnvironmentName}.json",
                                 true,
@@ -35,12 +37,11 @@
                             .AddEnvironmentVariables();
                     }
                 )
-                .ConfigureLogging(
-                    (hostContext, logging) =>
-                    {
-                        logging.AddConfiguration(hostContext.Configuration.GetSection("Logging"));
-                        logging.AddConsole();
-                    }
+                .UseSerilog(
+                    (hostingContext, services, loggerConfiguration) => loggerConfiguration
+                        .ReadFrom.Configuration(hostingContext.Configuration)
+                        .Enrich.FromLogContext()
+                        .WriteTo.Console()
                 )
                 .ConfigureServices(
                     (hostContext, services) =>
