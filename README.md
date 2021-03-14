@@ -50,6 +50,9 @@ If the package was installed by specifying a path to the .template.config folder
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
+More information on the template subject: `https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates`
+
+
 ## Publish
 
 ```
