@@ -12,5 +12,5 @@
         "language": "c#",
         "type": "project"
     },
-    "sourceName": "ServiceTemplate"
+    "sourceName": "GSoulavy.Template.WindowsService"
 }

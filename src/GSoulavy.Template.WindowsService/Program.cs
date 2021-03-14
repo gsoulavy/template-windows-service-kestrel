@@ -1,4 +1,4 @@
-﻿namespace ServiceTemplate
+﻿namespace GSoulavy.Template.WindowsService
 {
     using System;
 

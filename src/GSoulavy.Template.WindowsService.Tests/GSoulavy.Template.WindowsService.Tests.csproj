@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ServiceTemplate\ServiceTemplate.csproj" />
+      <ProjectReference Include="..\GSoulavy.Template.WindowsService\GSoulavy.Template.WindowsService.csproj" />
     </ItemGroup>
 
 </Project>
