@@ -7,7 +7,6 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using Microsoft.Extensions.Logging;
 
     using Serilog;
 
@@ -38,7 +37,7 @@
                     }
                 )
                 .UseSerilog(
-                    (hostingContext, services, loggerConfiguration) => loggerConfiguration
+                    (hostingContext, _, loggerConfiguration) => loggerConfiguration
                         .ReadFrom.Configuration(hostingContext.Configuration)
                         .Enrich.FromLogContext()
                         .WriteTo.Console()
