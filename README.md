@@ -1,5 +1,5 @@
 # Windows Service Template
-[![Continuous Ingegration](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/ci.yml) [![Release to Nuget](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/release.yml/badge.svg)](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/release.yml) ![Nuget](https://img.shields.io/nuget/v/GSoulavy.Template.WindowsService.Kestrel)
+[![Continuous Ingegration](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/ci.yml) [![Release to Nuget](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/release.yml/badge.svg)](https://github.com/gsoulavy/template-windows-service-kestrel/actions/workflows/release.yml) ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/GSoulavy.Template.WindowsService.Kestrel)
 
 ## Install the template
 ### From NuGet
