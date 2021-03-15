@@ -19,34 +19,5 @@
                         .Enrich.FromLogContext()
                         .WriteTo.Console()
                 );
-
-        /*   .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>();})
-           .ConfigureAppConfiguration(
-               (ctx, builder) =>
-               {
-                   if (!ctx.HostingEnvironment.IsDevelopment())
-                       builder.SetBasePath(Environment.GetEnvironmentVariable("ServiceBasePath"));
-
-                   builder
-                       .AddJsonFile("appsettings.json", false, true)
-                       .AddJsonFile("appsettings.log.json", false, true)
-                       .AddJsonFile(
-                           $"appsettings.{ctx.HostingEnvironment.EnvironmentName}.json",
-                           true,
-                           true
-                       )
-                       .AddEnvironmentVariables();
-               }
-           )
-           .ConfigureServices(
-               (hostContext, services) =>
-               {
-                   services.Configure<HostedSettings>(
-                       hostContext.Configuration.GetSection(nameof(HostedSettings))
-                   );
-
-               }
-           );
-       */
     }
 }
