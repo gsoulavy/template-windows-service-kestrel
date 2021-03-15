@@ -1,4 +1,4 @@
-﻿namespace GSoulavy.Template.WindowsService.Services
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Services
 {
     using System;
     using System.Threading;

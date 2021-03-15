@@ -1,4 +1,4 @@
-﻿namespace GSoulavy.Template.WindowsService.Configurations
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Configurations
 {
     public class HostedSettings
     {

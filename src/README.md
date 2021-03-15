@@ -40,13 +40,14 @@ directory, therefore the base path has to be set with an environment variable:
 {
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "<PROJECT.NAME>": {
+    "<PROJECT-NAME>": {
       "commandName": "Project",
+      "dotnetRunMessages": "true", 
+      "launchBrowser": true,
       "environmentVariables": {
-          "DOTNET_ENVIRONMENT": "Development"
+          "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }
 }
-
 ```

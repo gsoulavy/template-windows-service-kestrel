@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: ServiceTemplate
-        path: ./src/GSoulavy.Template.WindowsService/bin/Release/GSoulavy.Template.WindowsService.${{ github.event.release.tag_name }}.nupkg
+        path: ./src/GSoulavy.Template.WindowsService.Kestrel/bin/Release/GSoulavy.Template.WindowsService.Kestrel.${{ github.event.release.tag_name }}.nupkg
         
     - name: Publish NuGet Package
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

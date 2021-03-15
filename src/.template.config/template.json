@@ -12,5 +12,5 @@
         "language": "c#",
         "type": "project"
     },
-    "sourceName": "GSoulavy.Template.WindowsService"
+    "sourceName": "GSoulavy.Template.WindowsService.Kestrel"
 }

@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\GSoulavy.Template.WindowsService\GSoulavy.Template.WindowsService.csproj" />
+      <ProjectReference Include="..\GSoulavy.Template.WindowsService.Kestrel\GSoulavy.Template.WindowsService.Kestrel.csproj" />
     </ItemGroup>
 
 </Project>
