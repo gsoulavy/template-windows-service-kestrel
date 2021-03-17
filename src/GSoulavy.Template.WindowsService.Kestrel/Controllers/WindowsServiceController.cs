@@ -31,6 +31,7 @@
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] Request request)
         {
+            _logger.LogInformation("Post is called with {Name}", request.Name);
             await Task.Delay(1000);
             return Accepted(new ResponseRoot {Message = $"{request.Name} accepted"});
         }
