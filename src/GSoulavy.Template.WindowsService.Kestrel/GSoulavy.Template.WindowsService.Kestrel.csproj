@@ -4,7 +4,13 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <IsPackable>true</IsPackable>  
+    <IsPackable>true</IsPackable>
+    <Authors>Gab Soulavy</Authors>
+    <Description>dotnet 5 windows service template with built in kestrel and testing library. </Description>
+    <PackageProjectUrl>https://github.com/gsoulavy/template-windows-service-kestrel</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/gsoulavy/template-windows-service-kestrel/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/gsoulavy/template-windows-service-kestrel</RepositoryUrl>
+    <PackageTags>Windows Service Template</PackageTags>  
   </PropertyGroup>
 
   <PropertyGroup>
