@@ -1,4 +1,4 @@
-﻿namespace GSoulavy.Template.WindowsService.Kestrel.Tests.Gherkin.Features
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Tests.Features
 {
     using AutoFixture.Xunit2;
 

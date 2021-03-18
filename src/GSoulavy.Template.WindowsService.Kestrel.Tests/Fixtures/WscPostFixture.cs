@@ -1,4 +1,4 @@
-﻿namespace GSoulavy.Template.WindowsService.Kestrel.Tests.Gherkin.Fixtures
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Tests.Fixtures
 {
     using System.Threading.Tasks;
 
