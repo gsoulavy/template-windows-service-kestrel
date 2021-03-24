@@ -6,11 +6,11 @@
         "Windows Service"
     ],
     "identity": "Gab.Windows.Service.cSharp",
-    "name": "Windows Service Template",
+    "name": "Kestrel Windows Service Template",
     "shortName": "g-ws",
     "tags": {
-        "language": "c#",
+        "language": "C#",
         "type": "project"
     },
-    "sourceName": "GSoulavy.Template.WindowsService.Kestrel"
+    "sourcename": "gsoulavy.template.windowsservice.kestrel"
 }
