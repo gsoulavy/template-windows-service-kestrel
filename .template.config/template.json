@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Gab Soulavy",
-  "classifications": ["Console", "Windows-Service" ],
+  "classifications": [ "Common", "Console", "Windows-Service" ],
   "identity": "GSoulavy.Template.WindowsService.Kestrel",
   "name": "Kestrel Windows Service",
   "shortName": "windows-service",

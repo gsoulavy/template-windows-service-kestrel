@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Content Include="./src/**" Exclude="./src/**/bin/**;./src/**/obj/**;./src/*.DotSettings" />
-    <Content Include="./*" Exclude="./.git/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/" />
+    <Content Include="./**/*" Exclude="./.git/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/" />
     <Compile Remove="**/*" />
   </ItemGroup>
   
