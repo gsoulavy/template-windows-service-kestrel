@@ -17,15 +17,13 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: ./src
     - name: Create NuGet Package
       run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/template-windows-service-kestrel/releases/tag/${{ github.event.release.tag_name }}"
-      working-directory: ./src
     - name: Archive NuGet Package
       uses: actions/upload-artifact@v1
       with:
         name: ServiceTemplate
-        path: ./src/GSoulavy.Template.WindowsService.Kestrel/bin/Release/GSoulavy.Template.WindowsService.Kestrel.${{ github.event.release.tag_name }}.nupkg
+        path: ./bin/Release/GSoulavy.Template.WindowsService.Kestrel.${{ github.event.release.tag_name }}.nupkg
         
     - name: Publish NuGet Package
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

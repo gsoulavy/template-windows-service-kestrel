@@ -3,11 +3,11 @@
   "author": "Gab Soulavy",
   "classifications": [ "Common", "Console", "Windows-Service" ],
   "identity": "GSoulavy.Template.WindowsService.Kestrel",
-  "name": "Kestrel Windows Service",
+  "name": "Windows Service with Kestrel",
   "shortName": "windows-service",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution"
   },
   "sourceName": "GSoulavy.Template.WindowsService.Kestrel",
   "defaultName": "WindowsService1",
