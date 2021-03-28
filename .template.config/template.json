@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gab Soulavy",
+  "classifications": [ "Common", "Console", "Windows-Service" ],
+  "identity": "GSoulavy.Template.WindowsService.Kestrel",
+  "name": "Windows Service with Kestrel",
+  "shortName": "windows-service",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "GSoulavy.Template.WindowsService.Kestrel",
+  "defaultName": "WindowsService1",
+  "preferNameDirectory": true,
+  "guids": [
+    "9f06e407-e18e-4b70-914b-eded735b8564"
+  ],
+  "sources": [
+    {
+      "source": "./",
+      "include": ["**/*"],
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/.template.config/**",
+        "**/*.user",
+        "**/.git/**",
+        "**/.vs/**",
+        "**/.vscode/**",
+        "**/.idea/**",
+
+        "_rels/**",
+        "package/**",
+        "**/*.nuspec",
+        "*Content_Types*.xml" 
+      ]
+    }
+  ]
+}
