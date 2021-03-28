@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>GSoulavy.Template.WindowsService.Kestrel</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Windows Service Template</Title>
+    <Authors>Gab Soulavy</Authors>
+    <Description>dotnet 5 windows service template with built in kestrel and testing library. </Description>
+    <PackageProjectUrl>https://github.com/gsoulavy/template-windows-service-kestrel</PackageProjectUrl>
+    <PackageLicense>https://github.com/gsoulavy/template-windows-service-kestrel/blob/master/LICENSE</PackageLicense>
+    <RepositoryUrl>https://github.com/gsoulavy/template-windows-service-kestrel</RepositoryUrl>
+    <PackageTags>Windows Service Template</PackageTags>
+    
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoWarn>$(NoWarn);NU5128;NU5115</NoWarn> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="./src/**" Exclude="./src/**/bin/**;./src/**/obj/**;./src/*.DotSettings" />
+    <Content Include="./*" Exclude="./.git/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/" />
+    <Compile Remove="**/*" />
+  </ItemGroup>
+  
+</Project>

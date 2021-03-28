@@ -1,2 +1,0 @@
-Packing a template into a NuGet package (nupkg file)
-A custom template is packed with the dotnet pack command and a .csproj file. Alternatively, NuGet can be used with the nuget pack command along with a .nuspec file. However, NuGet requires the .NET Framework on Windows and Mono on Linux and macOS.
