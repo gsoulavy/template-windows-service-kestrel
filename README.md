@@ -4,11 +4,8 @@
 ## Install the template
 ### From NuGet
 ```
-dotnet new -i <NUGET_PACKAGE_ID>
-```
-### From file system directory
-```
-dotnet new -i <FILE_SYSTEM_DIRECTORY>
+dotnet new --install GSoulavy.Template.WindowsService.Kestrel
+
 ```
 ## Uninstall the template
 The uninstall command, without any other parameters, will list all installed templates.

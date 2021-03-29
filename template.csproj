@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="./**/*" Exclude="./.git/**;./.github/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/;./src/*.DotSettings" />
+    <Content Include="./**/*" Exclude="./.git/**;./.github/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/;./src/*.DotSettings;./src/*.sln" />
     <Compile Remove="**/*" />
   </ItemGroup>
   

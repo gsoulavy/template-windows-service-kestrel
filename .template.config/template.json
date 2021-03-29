@@ -15,6 +15,10 @@
   "guids": [
     "9f06e407-e18e-4b70-914b-eded735b8564"
   ],
+  "primaryOutputs": [{
+    "path": "./src/"
+  }
+  ],
   "sources": [
     {
       "source": "./",
