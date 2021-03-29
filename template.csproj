@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0</PackageVersion>
     <PackageId>GSoulavy.Template.WindowsService.Kestrel</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Windows Service Template</Title>
