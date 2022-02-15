@@ -33,20 +33,17 @@ builder.Services
     .AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+var app = builder.Build();
 builder.Services
     .Configure<JsonOptions>(
         options => { options.SerializerOptions.IncludeFields = true; }
     )
-    .Configure<JsonOptions>(
-        options => { options.SerializerOptions.IncludeFields = true; }
-    )
-    .AddEndpointsApiExplorer()
     .Configure<HostedSettings>(config.GetSection(nameof(HostedSettings)))
-    .AddSwaggerGen()
     .AddHostedService<HostedService>()
+    .AddEndpointsApiExplorer()
+    .AddSwaggerGen()
     .AddHealthChecks();
 
-var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
