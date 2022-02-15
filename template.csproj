@@ -6,22 +6,22 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Windows Service Template</Title>
     <Authors>Gab Soulavy</Authors>
-    <Description>dotnet 5 windows service template with built in kestrel and testing library. </Description>
+    <Description>dotnet 5 windows service template with built in kestrel and testing library.</Description>
     <PackageProjectUrl>https://github.com/gsoulavy/template-windows-service-kestrel</PackageProjectUrl>
     <PackageLicense>https://github.com/gsoulavy/template-windows-service-kestrel/blob/master/LICENSE</PackageLicense>
     <RepositoryUrl>https://github.com/gsoulavy/template-windows-service-kestrel</RepositoryUrl>
     <PackageTags>Windows Service Template</PackageTags>
-    
+
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
     <NoDefaultExcludes>true</NoDefaultExcludes>
-    <NoWarn>$(NoWarn);NU5128;NU5115</NoWarn> 
+    <NoWarn>$(NoWarn);NU5128;NU5115</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="./**/*" Exclude="./.git/**;./.github/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/;./src/*.DotSettings;./src/*.sln" />
-    <Compile Remove="**/*" />
+    <Content Include="./**/*" Exclude="./.git/**;./.github/**;./.idea/**;./bin/**;./obj/**;./template.csproj;./.template.config/;./src/*.DotSettings;./src/*.sln"/>
+    <Compile Remove="**/*"/>
   </ItemGroup>
-  
+
 </Project>

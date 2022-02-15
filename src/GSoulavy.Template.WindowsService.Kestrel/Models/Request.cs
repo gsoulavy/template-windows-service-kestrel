@@ -1,16 +1,15 @@
-﻿namespace GSoulavy.Template.WindowsService.Kestrel.Models
-{
-    using System.ComponentModel.DataAnnotations;
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Models;
 
+using System.ComponentModel.DataAnnotations;
+
+/// <summary>
+///     Request object
+/// </summary>
+public class Request
+{
     /// <summary>
-    /// Request object
+    ///     The name of the request
     /// </summary>
-    public class Request
-    {
-        /// <summary>
-        /// The name of the request
-        /// </summary>
-        [Required]
-        public string? Name { get; set; }
-    }
+    [Required]
+    public string? Name { get; set; }
 }

@@ -1,7 +1,6 @@
-﻿namespace GSoulavy.Template.WindowsService.Kestrel.Configurations
+﻿namespace GSoulavy.Template.WindowsService.Kestrel.Configurations;
+
+public class HostedSettings
 {
-    public class HostedSettings
-    {
-        public string Name { get; set; } = string.Empty;
-    }
+    public string Name { get; set; } = string.Empty;
 }

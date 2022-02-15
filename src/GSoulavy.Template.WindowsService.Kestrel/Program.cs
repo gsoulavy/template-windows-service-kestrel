@@ -1,23 +1,65 @@
-﻿namespace GSoulavy.Template.WindowsService.Kestrel
-{
-    using Microsoft.Extensions.Hosting;
-    using Microsoft.AspNetCore.Hosting;
+﻿using GSoulavy.Template.WindowsService.Kestrel.Configurations;
+using GSoulavy.Template.WindowsService.Kestrel.Services;
 
-    using Serilog;
+using Microsoft.AspNetCore.Http.Json;
+using Microsoft.Extensions.Hosting.WindowsServices;
 
-    internal class Program
+using Serilog;
+
+var builder = WebApplication.CreateBuilder(
+    new WebApplicationOptions
     {
-        private static void Main(string[] args) => CreateHostBuilder(args).Build().Run();
-
-        private static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .UseWindowsService()
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
-                .UseSerilog(
-                    (hostingContext, _, loggerConfiguration) => loggerConfiguration
-                        .ReadFrom.Configuration(hostingContext.Configuration)
-                        .Enrich.FromLogContext()
-                        .WriteTo.Console()
-                );
+        Args = args,
+        ContentRootPath = WindowsServiceHelpers.IsWindowsService() ? AppContext.BaseDirectory : default
     }
+);
+
+var config = new ConfigurationBuilder()
+    .AddEnvironmentVariables()
+    .AddJsonFile("appSettings.json", false, true)
+    .AddJsonFile($"appSettings.{builder.Environment.EnvironmentName}.json", true)
+    .Build();
+
+builder.Host
+    .UseWindowsService()
+    .UseSerilog(
+        (hostingContext, _, loggerConfiguration) => loggerConfiguration
+            .ReadFrom.Configuration(hostingContext.Configuration)
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+    );
+
+builder.Services
+    .AddControllers();
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services
+    .Configure<JsonOptions>(
+        options => { options.SerializerOptions.IncludeFields = true; }
+    )
+    .Configure<JsonOptions>(
+        options => { options.SerializerOptions.IncludeFields = true; }
+    )
+    .AddEndpointsApiExplorer()
+    .Configure<HostedSettings>(config.GetSection(nameof(HostedSettings)))
+    .AddSwaggerGen()
+    .AddHostedService<HostedService>()
+    .AddHealthChecks();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.MapHealthChecks("/health");
+
+app.MapControllers();
+
+app.Urls
+    .Add($"http://localhost:{config.GetValue<string>("Kestrel:PortNumber")}");
+
+await app
+    .RunAsync();
